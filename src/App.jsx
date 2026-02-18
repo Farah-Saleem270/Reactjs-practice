@@ -12,7 +12,7 @@
 //      <Setting />
 //      <h1>{UserKey}</h1>
 //     </div>
-    
+
 //   )
 // }
 
@@ -34,16 +34,16 @@ export default App
 
 // JSX in React js
 
-function App(){
+function App() {
   const userName = "Farah";
   let x = 20;
   let y = 30;
-  return(
+  return (
     <>
-    <h1>JSX in React js {userName}</h1>
-    <h1>{10+20+30}</h1>
-    <h1>{x*y}</h1>
-    <button onClick={()=> alert("hello")}>click</button>
+      <h1>JSX in React js {userName}</h1>
+      <h1>{10 + 20 + 30}</h1>
+      <h1>{x * y}</h1>
+      <button onClick={() => alert("hello")}>click</button>
     </>
   )
 }
