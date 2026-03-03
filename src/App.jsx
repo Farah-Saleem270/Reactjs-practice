@@ -29,21 +29,44 @@
 //   )
 // }
 
-export default App
+// export default App
 
 
 // JSX in React js
 
+// function App() {
+//   const userName = "Farah";
+//   let x = 20;
+//   let y = 30;
+//   return (
+//     <>
+//       <h1>JSX in React js {userName}</h1>
+//       <h1>{10 + 20 + 30}</h1>
+//       <h1>{x * y}</h1>
+//       <button onClick={() => alert("hello")}>click</button>
+//     </>
+//   )
+// }
+
 function App() {
-  const userName = "Farah";
-  let x = 20;
-  let y = 30;
+  function callFun() {
+    alert("function called")
+  }
+
+  const fruit = (name) => {
+    alert(name)
+  }
+
+
   return (
-    <>
-      <h1>JSX in React js {userName}</h1>
-      <h1>{10 + 20 + 30}</h1>
-      <h1>{x * y}</h1>
-      <button onClick={() => alert("hello")}>click</button>
-    </>
+    <div>
+      <h1>Event and function call</h1>
+      <button onClick={callFun}>click me</button>
+      <button onClick={()=>fruit('apple')}>Apply</button>
+      <button onClick={()=>fruit('banana')}>Banana</button>
+    </div>
   )
 }
+
+
+export default App
