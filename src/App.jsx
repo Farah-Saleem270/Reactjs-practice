@@ -48,25 +48,62 @@
 //   )
 // }
 
-function App() {
-  function callFun() {
-    alert("function called")
-  }
+// function App() {
+//   function callFun() {
+//     alert("function called")
+//   }
 
-  const fruit = (name) => {
-    alert(name)
-  }
+//   const fruit = (name) => {
+//     alert(name)
+//   }
 
+
+//   return (
+//     <div>
+//       <h1>Event and function call</h1>
+//       <button onClick={callFun}>click me</button>
+//       <button onClick={()=>fruit('apple')}>Apply</button>
+//       <button onClick={()=>fruit('banana')}>Banana</button>
+//     </div>
+//   )
+// }
+
+
+// export default App
+
+// State in react JS
+
+
+import { useState } from "react"
+import Counter from "./conuter"
+// function App(){
+//   let fruit = "Apple"
+//   const handleFruit=()=>{
+//     fruit = "Banana"
+//   }
+//   return(
+//     <div>
+//       <h1>State in react JS</h1>
+//       <h1>{fruit}</h1>
+//       <button onClick={handleFruit}>change fruit name </button>
+//     </div>
+//   )
+// }
+
+
+function App(){
+  const [friut, setFruit]=useState ("Apple")
+  const handleFruit=()=>{
+    setFruit("Banana")
+  }
 
   return (
     <div>
-      <h1>Event and function call</h1>
-      <button onClick={callFun}>click me</button>
-      <button onClick={()=>fruit('apple')}>Apply</button>
-      <button onClick={()=>fruit('banana')}>Banana</button>
+      <h1>State in react JS</h1>
+      <h1>{friut}</h1>
+      <button onClick={handleFruit}>Chnage Fruit Name</button>
+      <Counter />
     </div>
   )
 }
-
-
 export default App
