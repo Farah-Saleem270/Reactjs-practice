@@ -74,8 +74,8 @@
 // State in react JS
 
 
-import { useState } from "react"
-import Counter from "./conuter"
+// import { useState } from "react"
+// import Counter from "./conuter"
 // function App(){
 //   let fruit = "Apple"
 //   const handleFruit=()=>{
@@ -91,19 +91,38 @@ import Counter from "./conuter"
 // }
 
 
-function App(){
-  const [friut, setFruit]=useState ("Apple")
-  const handleFruit=()=>{
-    setFruit("Banana")
-  }
+// function App(){
+//   const [friut, setFruit]=useState ("Apple")
+//   const handleFruit=()=>{
+//     setFruit("Banana")
+//   }
 
+//   return (
+//     <div>
+//       <h1>State in react JS</h1>
+//       <h1>{friut}</h1>
+//       <button onClick={handleFruit}>Chnage Fruit Name</button>
+//       <Counter />
+//     </div>
+//   )
+// }
+// export default App
+
+import { useState } from "react"
+import User from "./User"
+function App() {
+  const [display, setDisplay] = useState(false)//ture
   return (
-    <div>
-      <h1>State in react JS</h1>
-      <h1>{friut}</h1>
-      <button onClick={handleFruit}>Chnage Fruit Name</button>
-      <Counter />
-    </div>
+    <>
+      <h1>Toggle or Hide Show</h1>
+      <button onClick={() => setDisplay(!display)}>Toggle</button>
+
+      {
+        // display ? <h1>Farah</h1> : null
+        display ? <User /> : null
+      }
+    </>
   )
 }
+
 export default App
