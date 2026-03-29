@@ -108,20 +108,76 @@
 // }
 // export default App
 
-import { useState } from "react"
-import User from "./User"
-function App() {
-  const [display, setDisplay] = useState(false)//ture
-  return (
-    <>
-      <h1>Toggle or Hide Show</h1>
-      <button onClick={() => setDisplay(!display)}>Toggle</button>
+// import { useState } from "react"
+// import User from "./User"
+// function App() {
+//   const [display, setDisplay] = useState(false)//ture
+//   return (
+//     <>
+//       <h1>Toggle or Hide Show</h1>
+//       <button onClick={() => setDisplay(!display)}>Toggle</button>
 
-      {
-        // display ? <h1>Farah</h1> : null
-        display ? <User /> : null
-      }
-    </>
+//       {
+//         // display ? <h1>Farah</h1> : null
+//         display ? <User /> : null
+//       }
+//     </>
+//   )
+// }
+
+// export default App
+
+// import { useState } from "react"
+
+// function App() {
+//   const [count, setCount] = useState(0)
+//   return (
+//     <div>
+//       <h1> Multiple Conditions or Else If</h1>
+//       <h1>{count}</h1>
+//       <button onClick={()=> setCount(count+1)}>Counter</button>
+//       {
+//         count==0? <h1>Condition 0</h1> 
+//         :count==1? <h1>Condition 1</h1>
+//         :count==2? <h1>Condition 2</h1>
+//         :count==3? <h1>Condition 3</h1>
+//         :count==4? <h1>Condition 4</h1>
+//         :null
+//       }
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+//Pass data between component
+import User from "./User"
+function App(){
+  // let Username = "Farah";
+  // let age = 19;
+  // let email = "farah@gmail.com";
+
+  let Userobj = {
+    name : "Ali",
+    age : 25,
+    email : "Ali@gmail.com",
+
+  }
+  let Userobj2 = {
+    name : "Farah",
+    age : 19,
+    email : "Farah@gmail.com",
+
+  }
+  return(
+    <div>
+      <h1>Props in React JS</h1>
+      {/* <User name="Yaha" age={19} email="@hdshdshd"/> */}
+      {/* <User name={Username} age={age} email={email}/> */}
+      <User user= {Userobj}/>
+      <User user= {Userobj2}/>
+    </div>
   )
 }
 
