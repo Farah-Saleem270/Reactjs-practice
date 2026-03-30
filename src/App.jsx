@@ -152,6 +152,9 @@
 
 
 //Pass data between component
+import { useState } from "react"
+import College from "./college"
+import Student from "./student"
 import User from "./User"
 function App(){
   // let Username = "Farah";
@@ -170,6 +173,10 @@ function App(){
     email : "Farah@gmail.com",
 
   }
+
+  let collegeName = ['LKH', 'AF', 'VTY', 'NIT']
+  const [student, setStudent]=useState()
+ 
   return(
     <div>
       <h1>Props in React JS</h1>
@@ -177,6 +184,9 @@ function App(){
       {/* <User name={Username} age={age} email={email}/> */}
       <User user= {Userobj}/>
       <User user= {Userobj2}/>
+      <College  name={collegeName[0]}/>
+      { student && <Student name={student}/>}
+      <button onClick={()=>setStudent("Farah")}>Update Student Name</button>
     </div>
   )
 }
