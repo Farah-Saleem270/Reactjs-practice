@@ -1,5 +1,8 @@
 // import Login, {Profile , Setting, UserKey}from "./UserComponent"
 
+import User from "./User";
+import Wrapper from "./wrapper";
+
 // function App(){
 //   return(
 //     <div>
@@ -152,43 +155,62 @@
 
 
 //Pass data between component
-import { useState } from "react"
-import College from "./college"
-import Student from "./student"
-import User from "./User"
-function App(){
-  // let Username = "Farah";
-  // let age = 19;
-  // let email = "farah@gmail.com";
+// import { useState } from "react"
+// import College from "./college"
+// import Student from "./student"
+// import User from "./User"
+// function App(){
+//   // let Username = "Farah";
+//   // let age = 19;
+//   // let email = "farah@gmail.com";
 
-  let Userobj = {
-    name : "Ali",
-    age : 25,
-    email : "Ali@gmail.com",
+//   let Userobj = {
+//     name : "Ali",
+//     age : 25,
+//     email : "Ali@gmail.com",
 
-  }
-  let Userobj2 = {
-    name : "Farah",
-    age : 19,
-    email : "Farah@gmail.com",
+//   }
+//   let Userobj2 = {
+//     name : "Farah",
+//     age : 19,
+//     email : "Farah@gmail.com",
 
-  }
+//   }
 
-  let collegeName = ['LKH', 'AF', 'VTY', 'NIT']
-  const [student, setStudent]=useState()
+//   let collegeName = ['LKH', 'AF', 'VTY', 'NIT']
+//   const [student, setStudent]=useState()
  
+//   return(
+//     <div>
+//       <h1>Props in React JS</h1>
+//       {/* <User name="Yaha" age={19} email="@hdshdshd"/> */}
+//       {/* <User name={Username} age={age} email={email}/> */}
+//       <User user= {Userobj}/>
+//       <User user= {Userobj2}/>
+//       <College  name={collegeName[0]}/>
+//       { student && <Student name={student}/>}
+//       <button onClick={()=>setStudent("Farah")}>Update Student Name</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+function App(){
   return(
     <div>
-      <h1>Props in React JS</h1>
-      {/* <User name="Yaha" age={19} email="@hdshdshd"/> */}
-      {/* <User name={Username} age={age} email={email}/> */}
-      <User user= {Userobj}/>
-      <User user= {Userobj2}/>
-      <College  name={collegeName[0]}/>
-      { student && <Student name={student}/>}
-      <button onClick={()=>setStudent("Farah")}>Update Student Name</button>
+      <h1>Hello</h1>
+      <Wrapper color="orange">
+         <h1>Hello Everyone</h1>
+      </Wrapper>
+      <Wrapper>
+         <h1>Hello Fari</h1>
+      </Wrapper>
+      {/* <User name= "Farah"/>
+      <User/> */}
+
     </div>
   )
 }
-
-export default App
+export default App;
