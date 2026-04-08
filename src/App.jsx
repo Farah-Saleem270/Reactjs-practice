@@ -1,5 +1,6 @@
 // import Login, {Profile , Setting, UserKey}from "./UserComponent"
 
+import { useState } from "react";
 import User from "./User";
 import Wrapper from "./wrapper";
 
@@ -179,7 +180,7 @@ import Wrapper from "./wrapper";
 
 //   let collegeName = ['LKH', 'AF', 'VTY', 'NIT']
 //   const [student, setStudent]=useState()
- 
+
 //   return(
 //     <div>
 //       <h1>Props in React JS</h1>
@@ -197,19 +198,24 @@ import Wrapper from "./wrapper";
 // export default App
 
 
-function App(){
-  return(
+function App() {
+  const[value,setValue]=useState("Farah");
+  return (
     <div>
-      <h1>Hello</h1>
+      {/* <h1>Hello</h1>
       <Wrapper color="orange">
          <h1>Hello Everyone</h1>
       </Wrapper>
       <Wrapper>
          <h1>Hello Fari</h1>
-      </Wrapper>
+      </Wrapper> */}
       {/* <User name= "Farah"/>
       <User/> */}
-
+      <h1>Get Input Faild</h1>
+      <input type="text" value={value} onChange={(event) => setValue
+        (event.target.value)} placeholder="Enter user name" />
+        <h1>{value}</h1>
+        <button onClick={()=>setValue("")}>Clear Value</button>
     </div>
   )
 }
