@@ -3,6 +3,7 @@
 import { useState } from "react";
 import User from "./User";
 import Wrapper from "./wrapper";
+import Skills from "./checkBoxes";
 
 // function App(){
 //   return(
@@ -198,25 +199,65 @@ import Wrapper from "./wrapper";
 // export default App
 
 
-function App() {
-  const[value,setValue]=useState("Farah");
-  return (
+// function App() {
+//   const[value,setValue]=useState("Farah");
+//   return (
+//     <div>
+//       {/* <h1>Hello</h1>
+//       <Wrapper color="orange">
+//          <h1>Hello Everyone</h1>
+//       </Wrapper>
+//       <Wrapper>
+//          <h1>Hello Fari</h1>
+//       </Wrapper> */}
+//       {/* <User name= "Farah"/>
+//       <User/> */}
+//       {/* <h1>Get Input Faild</h1>
+//       <input type="text" value={value} onChange={(event) => setValue
+//         (event.target.value)} placeholder="Enter user name" />
+//         <h1>{value}</h1>
+//         <button onClick={()=>setValue("")}>Clear Value</button> */}
+//     </div>
+//   )
+// }
+// export default App;
+
+
+
+// function App() {
+//   const [name,setName] = useState('');
+//   const [password,setPassword ]= useState('');
+//   const [email,setEmail ]= useState('');
+//   return (
+//     <div>
+//       <h1>Controlled Component</h1>
+//       <form action="" method="get">
+//         <input type="text" value={name} onChange={(event)=>setName(event.target.value)} placeholder="Enter Name" />
+//         <br /> <br />
+//         <input type="password" value={password} onChange={(event)=>setPassword(event.target.value)} placeholder="Enter Password" />
+//         <br /> <br />
+//         <input type="text" value={email} onChange={(event)=>setEmail(event.target.value)} placeholder="Enter Email" />
+//         <br /> <br />
+//         <button>Submit</button>
+//         <button onClick={()=>{setEmail('');setName('');setPassword('')}}>Clear</button>
+//         <h3>{name}</h3>
+//         <h3>{password}</h3>
+//         <h3>{email}</h3>
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+function App(){
+  return(
     <div>
-      {/* <h1>Hello</h1>
-      <Wrapper color="orange">
-         <h1>Hello Everyone</h1>
-      </Wrapper>
-      <Wrapper>
-         <h1>Hello Fari</h1>
-      </Wrapper> */}
-      {/* <User name= "Farah"/>
-      <User/> */}
-      <h1>Get Input Faild</h1>
-      <input type="text" value={value} onChange={(event) => setValue
-        (event.target.value)} placeholder="Enter user name" />
-        <h1>{value}</h1>
-        <button onClick={()=>setValue("")}>Clear Value</button>
+      <h1>Handle Checkbox in React js</h1>
+      <Skills />
     </div>
   )
 }
+
 export default App;
