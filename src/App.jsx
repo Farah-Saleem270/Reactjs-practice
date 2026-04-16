@@ -251,11 +251,37 @@ import Skills from "./checkBoxes";
 // export default App;
 
 
-function App(){
-  return(
+function App() {
+  const [gender, setGender] = useState('female');
+  const [city, setCity] = useState('Lahore');
+
+  return (
     <div>
-      <h1>Handle Checkbox in React js</h1>
-      <Skills />
+      {/* <h1>Handle Checkbox in React js</h1> */}
+      {/* <Skills /> */}
+
+
+      <h1>Handle Radio Button and Dropdown</h1>
+      <h4>Select gander</h4>
+      <h2>Selected gender : {gender}</h2>
+      <input onChange={(event) => setGender(event.target.value)} 
+      value={'male'} type="radio" name="gender" id="male"  checked={gender == "female"}/>
+      <label htmlFor="male">Male</label>
+      <input onChange={(event) => setGender(event.target.value)}
+       value={'female'} type="radio" name="gender" id="female"  checked={gender == "female"}/>
+      <label htmlFor="female">Female</label>
+      <br /><br /><br />
+      <h4>Select city</h4>
+      <select  onChange={(event)=>setCity(event.target.value)}>
+        <option value="gujrawala" >Gujrawala</option>
+        <option value="faislabad">Faislabad</option>
+        <option value="lahore" selected>Lahore</option>
+        <option value="karachi">Karachi</option>
+       
+      </select>
+       <h2>Selected city : {city}</h2>
+
+      
     </div>
   )
 }
