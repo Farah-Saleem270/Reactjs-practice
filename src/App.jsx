@@ -251,37 +251,134 @@ import Skills from "./checkBoxes";
 // export default App;
 
 
-function App() {
-  const [gender, setGender] = useState('female');
-  const [city, setCity] = useState('Lahore');
+// function App() {
+//   const [gender, setGender] = useState('female');
+//   const [city, setCity] = useState('Lahore');
 
+//   return (
+//     <div>
+//       {/* <h1>Handle Checkbox in React js</h1> */}
+//       {/* <Skills /> */}
+
+
+//       <h1>Handle Radio Button and Dropdown</h1>
+//       <h4>Select gander</h4>
+//       <h2>Selected gender : {gender}</h2>
+//       <input onChange={(event) => setGender(event.target.value)} 
+//       value={'male'} type="radio" name="gender" id="male"  checked={gender == "female"}/>
+//       <label htmlFor="male">Male</label>
+//       <input onChange={(event) => setGender(event.target.value)}
+//        value={'female'} type="radio" name="gender" id="female"  checked={gender == "female"}/>
+//       <label htmlFor="female">Female</label>
+//       <br /><br /><br />
+//       <h4>Select city</h4>
+//       <select  onChange={(event)=>setCity(event.target.value)}>
+//         <option value="gujrawala" >Gujrawala</option>
+//         <option value="faislabad">Faislabad</option>
+//         <option value="lahore" selected>Lahore</option>
+//         <option value="karachi">Karachi</option>
+
+//       </select>
+//        <h2>Selected city : {city}</h2>
+
+
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+function App() {
+  const userName = ['farah', 'same', 'warda'];
+  const userData = [
+    {
+      name: 'farah',
+      age: '18',
+      email: 'farah@test.com',
+      id: '1'
+    },
+    {
+      name: 'same',
+      age: '20',
+      email: 'same@test.com',
+      id: '2'
+    },
+    {
+      name: 'warda',
+      age: '28',
+      email: 'warda@test.com',
+      id: '3'
+    }
+  ]
   return (
     <div>
-      {/* <h1>Handle Checkbox in React js</h1> */}
-      {/* <Skills /> */}
+      <h1>Loop in JSX with Map Function</h1>
+      <table border={'1'}>
+        <thead>
+          <tr>
+            <td>id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            userData.map((user) => [
+              <tr key={user.id}>
+                <td>{user.id}</td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+                <td>{user.age}</td>
+              </tr>
+            ])
+
+          }
+        </tbody>
+      </table>
 
 
-      <h1>Handle Radio Button and Dropdown</h1>
-      <h4>Select gander</h4>
-      <h2>Selected gender : {gender}</h2>
-      <input onChange={(event) => setGender(event.target.value)} 
-      value={'male'} type="radio" name="gender" id="male"  checked={gender == "female"}/>
-      <label htmlFor="male">Male</label>
-      <input onChange={(event) => setGender(event.target.value)}
-       value={'female'} type="radio" name="gender" id="female"  checked={gender == "female"}/>
-      <label htmlFor="female">Female</label>
-      <br /><br /><br />
-      <h4>Select city</h4>
-      <select  onChange={(event)=>setCity(event.target.value)}>
-        <option value="gujrawala" >Gujrawala</option>
-        <option value="faislabad">Faislabad</option>
-        <option value="lahore" selected>Lahore</option>
-        <option value="karachi">Karachi</option>
-       
-      </select>
-       <h2>Selected city : {city}</h2>
 
-      
+
+
+      <h2>Dummy Data</h2>
+      <table border={'1'}>
+        <thead>
+          <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Farah</td>
+            <td>Farah@test.com</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Farah</td>
+            <td>Farah@test.com</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Farah</td>
+            <td>Farah@test.com</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Farah</td>
+            <td>Farah@test.com</td>
+            <td>18</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   )
 }
