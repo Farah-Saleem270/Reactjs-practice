@@ -313,8 +313,23 @@ function App() {
   ]
   return (
     <div>
-      <h1>Loop in JSX with Map Function</h1>
-      <table border={'1'}>
+
+      
+      <h1> Reuse Component in loop</h1>
+      {
+       userData.map((user)=>[
+        <div key={user.id}>
+         <User user={user}/>
+        </div>
+       ])
+      }
+
+
+
+
+
+      {/* <h1>Loop in JSX with Map Function</h1> */}
+      {/* <table border={'1'}>
         <thead>
           <tr>
             <td>id</td>
@@ -336,13 +351,8 @@ function App() {
 
           }
         </tbody>
-      </table>
-
-
-
-
-
-      <h2>Dummy Data</h2>
+      </table> */}
+      {/* <h2>Dummy Data</h2>
       <table border={'1'}>
         <thead>
           <tr>
@@ -378,7 +388,8 @@ function App() {
             <td>18</td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
+
     </div>
   )
 }
