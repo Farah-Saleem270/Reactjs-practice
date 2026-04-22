@@ -4,6 +4,7 @@ import { useState } from "react";
 import User from "./User";
 import Wrapper from "./wrapper";
 import Skills from "./checkBoxes";
+import Clocks from "./Clocks";
 
 // function App(){
 //   return(
@@ -289,107 +290,126 @@ import Skills from "./checkBoxes";
 // export default App;
 
 
-function App() {
-  const userName = ['farah', 'same', 'warda'];
-  const userData = [
-    {
-      name: 'farah',
-      age: '18',
-      email: 'farah@test.com',
-      id: '1'
-    },
-    {
-      name: 'same',
-      age: '20',
-      email: 'same@test.com',
-      id: '2'
-    },
-    {
-      name: 'warda',
-      age: '28',
-      email: 'warda@test.com',
-      id: '3'
-    }
-  ]
-  return (
-    <div>
+// function App() {
+//   const userName = ['farah', 'same', 'warda'];
+//   const userData = [
+//     {
+//       name: 'farah',
+//       age: '18',
+//       email: 'farah@test.com',
+//       id: '1'
+//     },
+//     {
+//       name: 'same',
+//       age: '20',
+//       email: 'same@test.com',
+//       id: '2'
+//     },
+//     {
+//       name: 'warda',
+//       age: '28',
+//       email: 'warda@test.com',
+//       id: '3'
+//     }
+//   ]
+//   return (
+//     <div>
 
       
-      <h1> Reuse Component in loop</h1>
-      {
-       userData.map((user)=>[
-        <div key={user.id}>
-         <User user={user}/>
-        </div>
-       ])
-      }
+//       <h1> Reuse Component in loop</h1>
+//       {
+//        userData.map((user)=>[
+//         <div key={user.id}>
+//          <User user={user}/>
+//         </div>
+//        ])
+//       }
 
 
 
 
 
-      {/* <h1>Loop in JSX with Map Function</h1> */}
-      {/* <table border={'1'}>
-        <thead>
-          <tr>
-            <td>id</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Age</td>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            userData.map((user) => [
-              <tr key={user.id}>
-                <td>{user.id}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.age}</td>
-              </tr>
-            ])
+//       {/* <h1>Loop in JSX with Map Function</h1> */}
+//       {/* <table border={'1'}>
+//         <thead>
+//           <tr>
+//             <td>id</td>
+//             <td>Name</td>
+//             <td>Email</td>
+//             <td>Age</td>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {
+//             userData.map((user) => [
+//               <tr key={user.id}>
+//                 <td>{user.id}</td>
+//                 <td>{user.name}</td>
+//                 <td>{user.email}</td>
+//                 <td>{user.age}</td>
+//               </tr>
+//             ])
 
-          }
-        </tbody>
-      </table> */}
-      {/* <h2>Dummy Data</h2>
-      <table border={'1'}>
-        <thead>
-          <tr>
-            <td>Id</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Age</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Farah</td>
-            <td>Farah@test.com</td>
-            <td>18</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Farah</td>
-            <td>Farah@test.com</td>
-            <td>18</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Farah</td>
-            <td>Farah@test.com</td>
-            <td>18</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Farah</td>
-            <td>Farah@test.com</td>
-            <td>18</td>
-          </tr>
-        </tbody>
-      </table> */}
+//           }
+//         </tbody>
+//       </table> */}
+//       {/* <h2>Dummy Data</h2>
+//       <table border={'1'}>
+//         <thead>
+//           <tr>
+//             <td>Id</td>
+//             <td>Name</td>
+//             <td>Email</td>
+//             <td>Age</td>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           <tr>
+//             <td>1</td>
+//             <td>Farah</td>
+//             <td>Farah@test.com</td>
+//             <td>18</td>
+//           </tr>
+//           <tr>
+//             <td>1</td>
+//             <td>Farah</td>
+//             <td>Farah@test.com</td>
+//             <td>18</td>
+//           </tr>
+//           <tr>
+//             <td>1</td>
+//             <td>Farah</td>
+//             <td>Farah@test.com</td>
+//             <td>18</td>
+//           </tr>
+//           <tr>
+//             <td>1</td>
+//             <td>Farah</td>
+//             <td>Farah@test.com</td>
+//             <td>18</td>
+//           </tr>
+//         </tbody>
+//       </table> */}
 
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+function App(){
+  const [color, setColor]=useState("white");
+  return(
+    <div>
+      <h1>Defaults Props in React Js</h1>
+      <select onChange={(event)=>setColor(event.target.value)}>
+        <option value="Green">Green</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="orange">Orange</option>
+      </select>
+      <Clocks color={color}/>
     </div>
   )
 }
