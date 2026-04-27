@@ -5,6 +5,8 @@ import User from "./User";
 import Wrapper from "./wrapper";
 import Skills from "./checkBoxes";
 import Clocks from "./Clocks";
+import Data from "./data";
+import Hook from "./class28";
 
 // function App(){
 //   return(
@@ -315,7 +317,7 @@ import Clocks from "./Clocks";
 //   return (
 //     <div>
 
-      
+
 //       <h1> Reuse Component in loop</h1>
 //       {
 //        userData.map((user)=>[
@@ -398,18 +400,120 @@ import Clocks from "./Clocks";
 // export default App;
 
 
-function App(){
-  const [color, setColor]=useState("white");
+// function App(){
+//   const [color, setColor]=useState("white");
+//   return(
+//     <div>
+//       <h1>Defaults Props in React Js</h1>
+//       <select onChange={(event)=>setColor(event.target.value)}>
+//         <option value="Green">Green</option>
+//         <option value="Red">Red</option>
+//         <option value="Blue">Blue</option>
+//         <option value="orange">Orange</option>
+//       </select>
+//       <Clocks color={color}/>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+// function App() {
+//   const collegeData = [
+//     {
+//       name: "ITE Alwar",
+//       city: "Alwar",
+//       website: "www.ite.com",
+//       student: [
+//         {
+//           name: "Farah ",
+//           age: '18',
+//           email: "farah@test.com"
+//         },
+//         {
+//           name: "Warda",
+//           age: '28',
+//           email: "warda@test.com"
+//         },
+//         {
+//           name: "Ali",
+//           age: '25',
+//           email: "Ali@test.com"
+//         }
+//       ]
+//     },
+//     {
+//       name: "IIT Dehli",
+//       city: "Dehli",
+//       website: "www.iie.com",
+//       student: [
+//         {
+//           name: "Farah ",
+//           age: '18',
+//           email: "farah@test.com"
+//         },
+//         {
+//           name: "Warda",
+//           age: '28',
+//           email: "warda@test.com"
+//         },
+//         {
+//           name: "Ali",
+//           age: '25',
+//           email: "Ali@test.com"
+//         }
+//       ]
+//     },
+//     {
+//       name: "PK Multan",
+//       city: "Multan",
+//       website: "www.pk.com",
+//       student: [
+//         {
+//           name: "Farah ",
+//           age: '18',
+//           email: "farah@test.com"
+//         },
+//         {
+//           name: "Warda",
+//           age: '28',
+//           email: "warda@test.com"
+//         },
+//         {
+//           name: "Ali",
+//           age: '25',
+//           email: "Ali@test.com"
+//         }
+//       ]
+
+//     }
+//   ]
+//   return (
+//     <div>
+//       <h1>Array Nested Looping with component</h1>
+//       {
+//         collegeData.map((college, index) => {
+//           return (
+//             <div key={index}>
+//               <Data college={college}/>
+//             </div>
+//           )
+
+//         })
+//       }
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+function App() {
   return(
     <div>
-      <h1>Defaults Props in React Js</h1>
-      <select onChange={(event)=>setColor(event.target.value)}>
-        <option value="Green">Green</option>
-        <option value="Red">Red</option>
-        <option value="Blue">Blue</option>
-        <option value="orange">Orange</option>
-      </select>
-      <Clocks color={color}/>
+      <h1>hel</h1>
+      <Hook />
     </div>
   )
 }
