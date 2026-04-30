@@ -1,11 +1,11 @@
 // import Login, {Profile , Setting, UserKey}from "./UserComponent"
 
-import { useState } from "react";
-import User from "./User";
-import Wrapper from "./wrapper";
-import Skills from "./checkBoxes";
-import Clocks from "./Clocks";
-import Data from "./data";
+import { useEffect, useState } from "react";
+// import User from "./User";
+// import Wrapper from "./wrapper";
+// import Skills from "./checkBoxes";
+// import Clocks from "./Clocks";
+// import Data from "./data";
 import Hook from "./class28";
 
 // function App(){
@@ -510,9 +510,30 @@ import Hook from "./class28";
 
 
 function App() {
-  return(
+
+  const [counter, setCounter] = useState(0)
+  const [data, setData] = useState(0)
+
+  useEffect(() => {
+    // callOnce();
+  counterFunction();
+  }, [counter])
+
+  function counterFunction(){
+    console.log("counterFunction" ,counter);
+    
+  }
+
+  function callOnce() {
+    console.log('callOnce function called');
+
+  }
+
+
+  return (
     <div>
-      <h1>hel</h1>
+      <button onClick={() => setCounter(counter + 1)}>Counter{counter}</button>
+      <button onClick={() => setData(data + 1)}>Data{data}</button>
       <Hook />
     </div>
   )
