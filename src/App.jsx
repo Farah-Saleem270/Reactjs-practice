@@ -509,34 +509,42 @@ import Hook from "./class28";
 // export default App;
 
 
-function App() {
+// function App() {
 
-  const [counter, setCounter] = useState(0)
-  const [data, setData] = useState(0)
+//   const [counter, setCounter] = useState(0)
+//   const [data, setData] = useState(0)
 
-  useEffect(() => {
-    // callOnce();
-  counterFunction();
-  }, [counter])
+//   useEffect(() => {
+//     // callOnce();
+//   counterFunction();
+//   }, [counter])
 
-  function counterFunction(){
-    console.log("counterFunction" ,counter);
+//   function counterFunction(){
+//     console.log("counterFunction" ,counter);
     
-  }
+//   }
 
-  function callOnce() {
-    console.log('callOnce function called');
+//   function callOnce() {
+//     console.log('callOnce function called');
 
-  }
+//   }
 
 
-  return (
+//   return (
+//     <div>
+//       <button onClick={() => setCounter(counter + 1)}>Counter{counter}</button>
+//       <button onClick={() => setData(data + 1)}>Data{data}</button>
+//       <Hook />
+//     </div>
+//   )
+// }
+
+// export default App;
+
+function App(){
+  return(
     <div>
-      <button onClick={() => setCounter(counter + 1)}>Counter{counter}</button>
-      <button onClick={() => setData(data + 1)}>Data{data}</button>
-      <Hook />
+      <h1>Handle Props Side Effect with useEffect in component</h1>
     </div>
   )
 }
-
-export default App;
