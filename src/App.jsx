@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 // import Clocks from "./Clocks";
 // import Data from "./data";
 import Hook from "./class28";
+import Counter from "./conuter";
 
 // function App(){
 //   return(
@@ -542,9 +543,25 @@ import Hook from "./class28";
 // export default App;
 
 function App(){
+  const [count, setCount]=useState(0)
+
+  const handleCounter=()=>{
+    console.log("handleCounter called");
+    
+  }
+
+  useEffect(()=>{
+    
+  })
+
+
+  handleCounter()
   return(
     <div>
-      <h1>Handle Props Side Effect with useEffect in component</h1>
+      <Counter count={count}/>
+      <button onClick={()=> setCount(count + 1)}>Counter</button>
     </div>
   )
 }
+
+export default App;
