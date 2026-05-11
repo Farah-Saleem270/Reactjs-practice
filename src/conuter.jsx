@@ -15,10 +15,11 @@
 
 // export default Counter;
 
-const Counter= ({count}) => {
+const Counter= ({count , data}) => {
     return(
         <div>
             <h1>Counter Value {count}</h1>
+            <h1>Counter Value {data}</h1>
         </div>
     )
 }

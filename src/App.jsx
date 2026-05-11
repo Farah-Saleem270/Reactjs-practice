@@ -544,6 +544,7 @@ import Counter from "./conuter";
 
 function App(){
   const [count, setCount]=useState(0)
+  const [data, setData]=useState(0)
 
   const handleCounter=()=>{
     console.log("handleCounter called");
@@ -551,15 +552,16 @@ function App(){
   }
 
   useEffect(()=>{
-    
-  })
+    handleCounter()
+  },[])
 
 
-  handleCounter()
+  
   return(
     <div>
       <Counter count={count}/>
       <button onClick={()=> setCount(count + 1)}>Counter</button>
+      <button onClick={()=> setData(data + 1)}>Data</button>
     </div>
   )
 }
